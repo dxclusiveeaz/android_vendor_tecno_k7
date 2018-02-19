@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter nicklaus, $(TARGET_DEVICE)),)
+ifneq ($(filter mx, $(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libaudiocustparam
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
