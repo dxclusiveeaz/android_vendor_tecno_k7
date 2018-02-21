@@ -1,30 +1,19 @@
-# Copyright (C) 2017 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/bin,system/bin)
 
-# Live wallpaper packages
-PRODUCT_PACKAGES := \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    VisualizationWallpapers \
-    librs_jni
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/etc,system/etc)
 
-# Publish that we support the live wallpaper feature.
-PRODUCT_COPY_FILES := \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/lib,system/lib)
 
-# Pick up overlay for features that depend on non-open-source files
-#DEVICE_PACKAGE_OVERLAYS := vendor//w2/overlay
+#PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/priv-app,system/priv-app)
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/proprietary,system)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/usr,system/usr)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/vendor/bin,system/vendor/bin)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/vendor/etc,system/vendor/etc)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/vendor/firmware,system/vendor/firmware)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/vendor/lib,system/vendor/lib)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/uhans/mx/vendor/thh,system/vendor/thh)
